@@ -47,7 +47,6 @@ import Navigation from "./components/Navigation";
 import Profile from "./components/Profile";
 import Payments from "./components/Payments";
 import Logistics from "./components/Logistics";
-import DiseaseDetection from "./components/DiseaseDetection";
 
 export default function App() {
   const { user, logout } = useAuth();
@@ -129,10 +128,6 @@ export default function App() {
       case "crop-recommendation":
         return user.role === "farmer" ? (
           <CropRecommendation language={language} />
-        ) : null;
-      case "disease-detection":
-        return user.role === "farmer" ? (
-          <DiseaseDetection language={language} />
         ) : null;
       case "schemes":
         return user.role === "farmer" ? (

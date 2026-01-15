@@ -46,9 +46,10 @@ export default function Navigation({
   const [isCategoriesOpen, setIsCategoriesOpen] = useState(false);
 
   // Determine navbar gradient based on user role
-  const navbarGradient = user?.role === "farmer" 
-    ? "bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600"
-    : "bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600";
+  const navbarGradient =
+    user?.role === "farmer"
+      ? "bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600"
+      : "bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600";
 
   const translations = {
     en: {
@@ -99,18 +100,26 @@ export default function Navigation({
     },
   };
 
-  const t = (key) => translations[language]?.[key] || translations.en[key] || key;
+  const t = (key) =>
+    translations[language]?.[key] || translations.en[key] || key;
 
   const allCategoriesItems =
     user?.role === "farmer"
       ? [
           { id: "dashboard", label: t("dashboard"), icon: Home },
           { id: "smart-farming", label: t("smartFarming"), icon: Sprout },
-          { id: "disease-management", label: t("diseaseManagement"), icon: Bug },
+          {
+            id: "disease-management",
+            label: t("diseaseManagement"),
+            icon: Bug,
+          },
           { id: "crop-calendar", label: t("cropCalendar"), icon: Calendar },
-          { id: "crop-recommendation", label: t("cropRecommendation"), icon: Sprout },
+          {
+            id: "crop-recommendation",
+            label: t("cropRecommendation"),
+            icon: Sprout,
+          },
           { id: "schemes", label: t("schemes"), icon: FileText },
-          { id: "disease-detection", label: "Disease Detection", icon: Leaf },
         ]
       : [
           { id: "dashboard", label: t("dashboard"), icon: Home },
@@ -125,11 +134,18 @@ export default function Navigation({
       ? [
           { id: "dashboard", label: t("dashboard"), icon: Home },
           { id: "smart-farming", label: t("smartFarming"), icon: Sprout },
-          { id: "disease-management", label: t("diseaseManagement"), icon: Bug },
+          {
+            id: "disease-management",
+            label: t("diseaseManagement"),
+            icon: Bug,
+          },
           { id: "crop-calendar", label: t("cropCalendar"), icon: Calendar },
-          { id: "crop-recommendation", label: t("cropRecommendation"), icon: Sprout },
+          {
+            id: "crop-recommendation",
+            label: t("cropRecommendation"),
+            icon: Sprout,
+          },
           { id: "schemes", label: t("schemes"), icon: FileText },
-          { id: "disease-detection", label: "Disease Detection", icon: Leaf },
         ]
       : [
           { id: "dashboard", label: t("dashboard"), icon: Home },
@@ -177,7 +193,9 @@ export default function Navigation({
               >
                 <MapPin className="w-4 h-4 text-white" />
                 <div className="text-left">
-                  <div className="text-xs text-white/90 font-medium">{t("deliverTo")}</div>
+                  <div className="text-xs text-white/90 font-medium">
+                    {t("deliverTo")}
+                  </div>
                   <div className="text-xs font-bold text-white">
                     {user?.location || "Pune,Maharashtra"}
                   </div>
@@ -200,7 +218,9 @@ export default function Navigation({
                         onPageChange("marketplace");
                       }
                     }}
-                    onCategoriesClick={() => setIsCategoriesOpen(!isAllMenuOpen)}
+                    onCategoriesClick={() =>
+                      setIsCategoriesOpen(!isAllMenuOpen)
+                    }
                   />
                 </div>
               </div>
@@ -252,7 +272,10 @@ export default function Navigation({
                   >
                     <div className="hidden lg:block text-right">
                       <div className="text-xs text-white/90 font-medium">
-                        Hello, <span className="font-bold">{user?.username?.split(" ")[0] || "User"}</span>
+                        Hello,{" "}
+                        <span className="font-bold">
+                          {user?.username?.split(" ")[0] || "User"}
+                        </span>
                       </div>
                       <div className="text-xs font-semibold text-white">
                         {t("account")}
@@ -401,7 +424,14 @@ export default function Navigation({
           />
           <div
             className="fixed top-0 left-0 bottom-0 w-96 bg-white shadow-2xl overflow-y-auto"
-            style={{ position: "fixed", zIndex: 9999, top: 0, left: 0, bottom: 0, width: "384px" }}
+            style={{
+              position: "fixed",
+              zIndex: 9999,
+              top: 0,
+              left: 0,
+              bottom: 0,
+              width: "384px",
+            }}
           >
             {/* User Card */}
             <div className="bg-white border-b border-gray-200 p-6">
