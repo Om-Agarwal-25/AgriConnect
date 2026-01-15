@@ -81,6 +81,14 @@ AgriConnect/
 
 - English, Hindi
 
+## 🖼️ Screenshots
+
+- Login Page - AgriConnect\screenshots\Login-page.png
+- Farmer Dashboard - AgriConnect\screenshots\Farmer-Dashboard.png
+- Buyer Dashboard - AgriConnect\screenshots\Buyer-Dashboard.png
+- Marketplace - AgriConnect\screenshots\Marketplace.png
+- Mobile View - AgriConnect\screenshots\Mobile-View.png
+
 ## 🛠️ Tech Stack
 
 **Frontend:**
