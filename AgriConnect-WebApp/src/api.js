@@ -156,10 +156,7 @@ export async function getRecommendationHistory(userId, limit = 10) {
 
 export async function sendChatbotMessage(message, userId = null) {
   try {
-    const CHATBOT_API_URL =
-      import.meta.env.VITE_CHATBOT_API_URL ||
-      "http://localhost:8000/api/chatbot";
-    const res = await fetch(`${CHATBOT_API_URL}/message`, {
+    const res = await fetch(`${API_URL}/chatbot/message`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message, user_id: userId }),

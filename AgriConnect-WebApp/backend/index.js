@@ -7,6 +7,7 @@ import userRoutes from "./routes/user.js";
 import diagnosticsRoutes from "./routes/diagnostics.js";
 import cropRecommendationRoutes from "./routes/cropRecommendation.js";
 import marketPricesRoutes from "./routes/marketPrices.js";
+import chatbotRoutes from "./routes/chatbot.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/diagnostics", diagnosticsRoutes);
 app.use("/api/crop-recommendation", cropRecommendationRoutes);
 app.use("/api/market-prices", marketPricesRoutes);
+app.use("/api/chatbot", chatbotRoutes);
 
 // Start server first
 app.listen(PORT, () => {
